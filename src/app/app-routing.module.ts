@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'share-trading-bot',
     loadChildren: () =>
       import('./home-page/home-page.module').then(
         (m) => m.HomePageModule
