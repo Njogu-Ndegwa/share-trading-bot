@@ -1,0 +1,83 @@
+.body {
+    background-color: #051762;
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--font-family);
+    
+    .form-container {
+        margin-top: 3rem;
+        .form {
+            width: 50vw;
+            height: 60vh;
+
+            .second-row{
+                display: flex;
+                justify-content: space-between;
+                .custom-input {
+                    width: 300px;
+                }
+            }
+
+            .input-container {
+                color: white;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 1rem;
+
+                .custom-input {
+                    border-radius: 5px;
+                    border: 1.5px solid #5a597d;
+                    background-color: #f0f0f000;
+                    height: 35px;
+                    text-indent: 10px;
+                    color: white;
+                }
+
+                .custom-select {
+                    border-radius: 5px;
+                    border: 1.5px solid #5a597d;
+                    background-color: #f0f0f000;
+                    height: 35px;
+                    text-indent: 10px;
+                    color: white;
+                }
+                .submit-button {
+                    border: none;
+                    background: linear-gradient(to bottom right, #51aef5, #08217c);
+                    height: 40px;
+                    border-radius: 5px;
+                    color: white;
+                    margin-bottom: 5rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+        .heading {
+            margin-bottom: 2rem;
+            h1 {
+                font-weight: 200;
+                font-size: 44px;
+                color: white;
+            }
+
+            p {
+                color: rgba(255, 255, 255, 0.749);
+
+            }
+        }
+    }
+
+    .stats {
+        margin-top: 9rem;
+        height: 60vh;
+
+        .progress-bar {
+            margin-top: 2rem;
+        }
+        p {
+            margin-top: 1rem;
+            color: rgba(255, 255, 255, 0.749);
+            text-align: center;
+        }
+    }
+}
