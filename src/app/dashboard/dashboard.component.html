@@ -1,54 +1,208 @@
 <div class="body">
     <div class="header">
-        <div class="logo">
 
+        <div class="left-content">
+            <div class="logo">
+
+            </div>
+            <div class="welcome-content">
+                <p>Welcome Joshua</p>
+            </div>
         </div>
         <div class="right-content">
-            <input class="custom-input" placeholder=" Search your items"/>
-            <p><i class="fa-regular fa-bell"></i></p>
+            <!-- <p><i class="fa-regular fa-bell"></i></p> -->
+            <div class="input-container">
+                <input class="custom-input" placeholder="Search your items" />
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="bell-icon">
+                <i class="fa-regular fa-bell"></i>
+            </div>
+            <div class="avatar">
+                <div class="dropdown">
+                    <button (click)="toggleDropdown()">
+                        <i class="fa-solid fa-circle-user user-icon"></i>
+                    </button>
+                    <div class="dropdown-menu" *ngIf="showDropdown">
+                        <div class="header-menu">
+                            <div class="profile-image">
+                                <i class="fa-solid fa-user user-icon"></i>
+                            </div>
+                            <div>
+                                <p>Tracy baraza
+                                    <br>
+                                    <span>baraza@gmail.com</span>
+                                </p>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="menu-header-content">
+                            <button (click)="viewProfile()">View Profile</button>
+                            <br>
+                            <button (click)="logOut()">Log Out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container-fluid">
-        <div class="row" style="min-height: 90vh;" >
+        <div class="row" style="min-height: 90vh;">
 
             <div class="col-md-2" style="margin: 0; padding: 0;">
                 <div class="sidebar">
                     <div class="sidebar-content">
 
-                    <ul>
-                        <li class="active-link"><span><i class="fas fa-tachometer-alt"></i></span><a href="">Dashboard</a></li>
-                        <li><span><i class="fas fa-wallet"></i></span><a href="">Wallet</a></li>
-                        <li><span><i class="fas fa-robot"></i></span><a href="">Trading Bot</a></li>
-                        <li><span><i class="fas fa-cog"></i></span><a href="">Settings</a></li>
-                    </ul>
-                </div>
+                        <ul>
+                            <li class="active-link"><span><i class="fas fa-tachometer-alt"></i></span><a
+                                    href="">Dashboard</a></li>
+                            <li><span><i class="fas fa-wallet"></i></span><a href="">Wallet</a></li>
+                            <li><span><i class="fas fa-robot"></i></span><a href="">Trading Bot</a></li>
+                            <li><span><i class="fas fa-cog"></i></span><a href="">Settings</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
             <div class="col-md-10" style="margin-left: -1rem;">
                 <div class="card-container">
                     <div class="card card-1">
-
+                        <div class="outer-card-container">
+                            <div class="left-side-card">
+                                <p class="top-p">Total Accounts</p>
+                                <p class="bottom-p">
+                                    Current Value
+                                </p>
+                                <p class="value-p">$4200</p>
+                            </div>
+                            <div class="right-side-card">
+                                <p class="top-p">Recievable</p>
+                                <p class="bottom-p">+12%</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="card card-2">
-
+                        <div class="outer-card-container">
+                            <div class="left-side-card">
+                                <p class="top-p">Equity Ratio</p>
+                                <p class="bottom-p">
+                                    Current Value
+                                </p>
+                                <p class="value-p">$12800.55</p>
+                            </div>
+                            <div class="right-side-card">
+                                <p class="top-p">Payable</p>
+                                <p class="bottom-p">+150%</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="card card-3">
-
+                        <div class="outer-card-container">
+                            <div class="left-side-card">
+                                <p class="top-p">Debt equity</p>
+                                <p class="bottom-p">
+                                    Current Value
+                                </p>
+                                <p class="value-p">$2300.99</p>
+                            </div>
+                            <div class="right-side-card">
+                                <p class="top-p">Recievable</p>
+                                <p class="bottom-p">+50%</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="card card-4">
-
+                        <div class="outer-card-container">
+                            <div class="left-side-card">
+                                <p class="top-p">Total Accounts</p>
+                                <p class="bottom-p">
+                                    Current Value
+                                </p>
+                                <p class="value-p">$1650.50</p>
+                            </div>
+                            <div class="right-side-card">
+                                <p class="top-p">Recievable</p>
+                                <p class="bottom-p">+80%</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="second-row">
                     <div class="analytics">
-
+                        <div class="title">
+                            <div class="left-side">
+                                Wallet Analytics
+                            </div>
+                            <div class="right-side">
+                                <span>1D</span>
+                                <span>|</span>
+                                <span>2D</span>
+                                <span>|</span>
+                                <span>1M</span>
+                                <span>|</span>
+                                <span>6M</span>
+                                <span>|</span>
+                                <span>1Y</span>
+                                <span>|</span>
+                                <span>5Y</span>
+                                <span>|</span>
+                                <span>Max</span>
+                            </div>
+                        </div>
+                        <div>
+                            <canvas #myCanvas baseChart width="700" height="250" [type]="'line'" [data]="lineChartData"
+                                [options]="lineChartOptions" [legend]="lineChartLegend">
+                            </canvas>
+                        </div>
                     </div>
 
                     <div class="traffic">
+                        <div style="margin-bottom: 1rem; color: white; margin-top: 1rem; margin-left: 1rem;">
+                            Traffic
+                        </div>
+                        <div style="margin-left: 2.7rem;">
+                            <canvas baseChart [datasets]="doughnutChartDatasets" [options]="doughnutChartOptions"
+                                [legend]="true" [type]="'doughnut'" width="170">
+                            </canvas>
+                        </div>
+                        <div class="labels">
+                            <div class="label">
+                                33%
+                                <div class="l-container">
+                                    <div class="circle a">
 
+                                    </div>
+                                    <div>
+                                        <p>Send</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="label">
+                                55%
+                                <div class="l-container">
+                                    <div class="circle b">
+
+                                    </div>
+                                    <div>
+                                        <p>Cash Out</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="label">
+                                12%
+                                <div class="l-container">
+                                    <div class="circle c">
+
+                                    </div>
+                                    <div>
+                                        <p>Withdraw</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="third-row">
