@@ -1,0 +1,57 @@
+.body {
+    background-color: #051762;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card {
+        min-height: 50vh;
+        width: 30vw;
+        background: rgba(255, 255, 255, 0.089);
+        backdrop-filter: blur(1px);
+
+        p{
+          color: white;
+          font-size: 30px;
+        }
+
+        .input-container {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+
+            .custom-input {
+                border-radius: 5px;
+                border: 1.5px solid #5a597d;
+                background-color: #f0f0f000;
+                height: 35px;
+                text-indent: 10px;
+                color: white;
+            }
+
+            .custom-input:focus {
+                outline: none;
+            }
+
+            .custom-select {
+                border-radius: 5px;
+                border: 1.5px solid #5a597d;
+                background-color: #f0f0f000;
+                height: 35px;
+                text-indent: 10px;
+                color: white;
+            }
+            .login-button {
+                border: none;
+                background: linear-gradient(to bottom right, #51aef5, #08217c);
+                height: 40px;
+                border-radius: 5px;
+                color: white;
+                margin-bottom: 2rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+}

@@ -1,20 +1,23 @@
 .body {
-    background-color: #051762;
-    width: 100vw;
     height: 100vh;
     font-family: var(--font-family);
     
     .form-container {
         margin-top: 3rem;
+        min-width: 50vw;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 1rem;
+        background: rgba(255, 255, 255, 0.089);
+        backdrop-filter: blur(1px);
         .form {
-            width: 50vw;
-            height: 60vh;
-
+            width: 45vw;
+  
             .second-row{
                 display: flex;
                 justify-content: space-between;
                 .custom-input {
-                    width: 300px;
+                    width: 250px;
                 }
             }
 
@@ -47,7 +50,7 @@
                     height: 40px;
                     border-radius: 5px;
                     color: white;
-                    margin-bottom: 5rem;
+                    margin-bottom: 3rem;
                     margin-top: 1rem;
                 }
             }
@@ -68,15 +71,16 @@
     }
 
     .stats {
-        margin-top: 9rem;
+        margin-top: 3rem;
         height: 60vh;
-
+        background: rgba(255, 255, 255, 0.089);
+        backdrop-filter: blur(1px);
         .progress-bar {
             margin-top: 2rem;
         }
         p {
             margin-top: 1rem;
-            color: rgba(255, 255, 255, 0.749);
+            color: white;
             text-align: center;
         }
     }

@@ -6,7 +6,7 @@ import { TradingBotRoutingModule } from './trading-bot-routing.module';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 @NgModule({
   declarations: [
-TradingBotComponent
+// TradingBotComponent
   ],
   imports: [
     CommonModule,
@@ -38,15 +38,6 @@ TradingBotComponent
         "clockwise": false,
         "startFromZero": false,
         "lazy": true})
-
-    // NgCircleProgressModule.forRoot({
-    //     radius: 100,
-    //     outerStrokeWidth: 16,
-    //     innerStrokeWidth: 8,
-    //     outerStrokeColor: "#78C000",
-    //     innerStrokeColor: '#051762',
-    //     animationDuration: 300,
-    //   })
 
   ],
 })

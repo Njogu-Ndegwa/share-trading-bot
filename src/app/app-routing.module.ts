@@ -11,6 +11,23 @@ const routes: Routes = [
   },
 
   {
+    path: 'login',
+    loadChildren: () =>
+      import('./login-page/login-page.module').then(
+        (m) => m.LoginPageModule
+      ),
+  },
+
+  {
+    path: 'signup',
+    loadChildren: () =>
+      import('./sign-up/sign-up.module').then(
+        (m) => m.SignUpModule
+
+      ),
+  },
+
+  {
     path: 'trading-bot',
     loadChildren: () =>
       import('./trading-bot/trading-bot.module').then(
